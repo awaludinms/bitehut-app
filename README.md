@@ -16,10 +16,10 @@
   cd bitehut-app
   ```
 
-4. Copy .env.example into .env
+4. Copy .env.docker into .env
 
   ```
-  cp .env.example .env
+  cp .env.docker .env
   ```
 
 5. Run docker
