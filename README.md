@@ -4,16 +4,16 @@
 
 1. Install docker and docker-compose
 
-2. Clone BiteHub from https://github.com/awaludinms/bitehut-api.git
+2. Clone BiteHub from https://github.com/awaludinms/bitehut-app.git
 
   ```
-  git clone https://github.com/awaludinms/bitehut-api.git
+  git clone https://github.com/awaludinms/bitehut-app.git
   ```
   
 3. Enter Clone directory
 
   ```
-  cd bitehut-api
+  cd bitehut-app
   ```
 
 4. Copy .env.example into .env
@@ -31,23 +31,23 @@
 6. Add APP_KEY
 
   ```
-  docker exec -it bitehut-apiserv php artisan key:generate
+  docker exec -it bitehut4_app php artisan key:generate
   ```
 
 7. Migrate Database Migrations and Seed
 
   ```
-  docker exec -it bitehut-apiserv php artisan migrate
+  docker exec -it bitehut4_app php artisan migrate
   ```
   
   ```
-  docker exec -it bitehut-apiserv php artisan db:seed
+  docker exec -it bitehut4_app php artisan db:seed
   ```
 
 8. Run Test
 
   ```
-  docker exec -it bitehut-apiserv php artisan test
+  docker exec -it bitehut4_app php artisan test
   ```
 
 
@@ -796,7 +796,7 @@ status code: **200** - OK
 
 ```
 {
-  "message": "Restaurant is successfully removed",
+    "message": "Restaurant is successfully removed",
   "errors": null,
   "success": true,
   "data": {
