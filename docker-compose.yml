@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: docker/php/Dockerfile
-    container_name: laravel_app
+    container_name: bitehut4_app
     restart: unless-stopped
     ports:
       - "8080:80"
@@ -15,7 +15,7 @@ services:
       - ./docker/php/Caddyfile:/etc/caddy/Caddyfile
       - ./docker/php/php.ini:/usr/local/etc/php/conf.d/99-custom.ini
     networks:
-      - laravel_network
+      - bitehut_network
     depends_on:
       - mysql
       - redis
@@ -23,7 +23,7 @@ services:
   # MySQL Service
   mysql:
     image: mariadb:11.6.2
-    container_name: laravel_mysql
+    container_name: bitehut4_mysql
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root_password
@@ -35,24 +35,24 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
-      - laravel_network
+      - bitehut_network
     command: --default-authentication-plugin=mysql_native_password
 
   # Redis Service
   redis:
     image: redis:7-alpine
-    container_name: laravel_redis
+    container_name: bitehut4_redis
     restart: unless-stopped
     ports:
       - "6379:6379"
     volumes:
       - redis_data:/data
     networks:
-      - laravel_network
+      - bitehut_network
     command: redis-server --appendonly yes
 
 networks:
-  laravel_network:
+  bitehut_network:
     driver: bridge
 
 volumes:

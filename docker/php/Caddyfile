@@ -4,6 +4,7 @@
 
 	# Disable automatic HTTPS for local development
 	# Remove this line for production to enable automatic Let's Encrypt certificates
+	# auto_https off
 	auto_https off
 
 	# Set global options
