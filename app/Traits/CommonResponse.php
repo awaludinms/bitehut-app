@@ -7,7 +7,7 @@ trait CommonResponse
     /**
      * Create a new class instance.
      */
-    public function success($message, $data=[], $id)
+    public function success($message, $data=[], $id=0)
     {
         //
         return response()->json([
