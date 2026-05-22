@@ -2,7 +2,7 @@
 
 ## Installation via Docker Compose
 
-1. Install docker and docker-compose
+1. Install latest docker and docker-compose
 
 2. Clone BiteHub from https://github.com/awaludinms/bitehut-app.git
 
