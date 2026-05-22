@@ -28,13 +28,19 @@
   docker-compose up -d
   ```
 
-6. Add APP_KEY
+6. Run Composer Install
+  
+  ```
+  docker exec -it bitehut4_app composer install
+  ```
+
+7. Add APP_KEY
 
   ```
   docker exec -it bitehut4_app php artisan key:generate
   ```
 
-7. Migrate Database Migrations and Seed
+8. Migrate Database Migrations and Seed
 
   ```
   docker exec -it bitehut4_app php artisan migrate
@@ -44,7 +50,7 @@
   docker exec -it bitehut4_app php artisan db:seed
   ```
 
-8. Run Test
+9. Run Test
 
   ```
   docker exec -it bitehut4_app php artisan test
