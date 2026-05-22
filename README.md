@@ -55,8 +55,7 @@
   ```
   docker exec -it bitehut4_app php artisan test
   ```
-
-
+---
 
 ## Manual Installation
 
