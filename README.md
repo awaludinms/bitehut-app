@@ -25,7 +25,7 @@
 5. Run docker
 
   ```
-  docker-compose up -d
+  docker compose up -d --build
   ```
 
 6. Run Composer Install
